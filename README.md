@@ -25,16 +25,18 @@ cmake ..
 cmake --build . --config Release
 ```
 这个时候生成一个build文件夹，里面有quantize,main 等文件
+
 1.3.2 量化模型
-1.3.2.1 安装llama.cpp的依赖库
+- 安装llama.cpp的依赖库
 ```shell
 python3 -m pip install -r requirements.txt
 ```
-1.3.2.2 将上面步骤2中下载的llama模型转换为FP16的格式.使用如下命令,[]内需要修改为你的模型路径
+- 将上面步骤2中下载的llama模型转换为FP16的格式.使用如下命令,[]内需要修改为你的模型路径
 ```shell
 python3 convert.py [your model path]
 ```
-1.3.2.3 将生成的FP16格式的模型文件进行4-bits的量化，使用如下命令，
+- 将生成的FP16格式的模型文件进行4-bits的量化，使用如下命令，
+
 如果是Linux 或是 MacOS 第一个[]内输入，例如：./models/7B/ggml-model-f16.bin ; 第二个[] 内输入你生成模型的目标路径,例如:./models/7B/ggml-model-q4_0.bin
 ```shell
 ./quantize [your f16 file path] [your q4 model path] 2
@@ -48,15 +50,16 @@ build\bin\Release\quantize [your f16 file path] [your q4 model path] 2
 
 1.4.1 在命令行中执行
 
-在Linux 或是 MacOS 运行:
+- 在Linux 或是 MacOS 运行:
 ```shell
 ./main -m [your q4 model path] -n 128
 ```
-在windows 运行:
+- 在windows 运行:
 ```shell
 \build\bin\Release\main -m [your q4 model path] -n 128
 ```
 1.4.2 使用llama_cpp库来载入模型,如使用如下python代码:
+
 先使用pip 安装llama_cpp库
 ```shell
 pip install llama_cpp
@@ -101,15 +104,16 @@ cmake --build . --config Release
 这个时候生成一个build文件夹，里面有quantize,main 等文件
 - 也可以直接使用Chimera文件夹已经生成好的build文件目录进行编译
 2.3.2 量化模型
-2.3.2.1 安装llama.cpp的依赖库
+- 安装llama.cpp的依赖库
 ```shell
 python3 -m pip install -r requirements.txt
 ```
-2.3.2.2 将上面步骤2中下载的llama模型转换为FP16的格式.使用如下命令,[]内需要修改为你的模型路径
+- 将上面步骤2中下载的llama模型转换为FP16的格式.使用如下命令,[]内需要修改为你的模型路径
 ```shell
 python3 convert.py [your model path]
 ```
-2.3.2.3 将生成的FP16格式的模型文件进行4-bits的量化，使用如下命令，
+- 将生成的FP16格式的模型文件进行4-bits的量化，使用如下命令，
+
 如果是Linux 或是 MacOS 第一个[]内输入，例如：./models/7B/ggml-model-f16.bin ; 第二个[] 内输入你生成模型的目标路径,例如:./models/7B/ggml-model-q4_0.bin
 ```shell
 ./quantize [your f16 file path] [your q4 model path] 2
@@ -123,11 +127,11 @@ build\bin\Release\quantize [your f16 file path] [your q4 model path] 2
 
 2.4.1 在命令行中执行
 
-在Linux 或是 MacOS 运行:
+- 在Linux 或是 MacOS 运行:
 ```shell
 ./main -m [your q4 model path] -n 128
 ```
-在windows 运行:
+- 在windows 运行:
 ```shell
 \build\bin\Release\main -m [your q4 model path] -n 128
 ```
@@ -154,6 +158,7 @@ print(output)
 3.1 下载bloomz模型，具体可以点击[链接地址](https://github.com/NouamaneTazi/bloomz.cpp)进行查看
 
 3.2 自行编译，可以使用make工具进行编译, 具体指令为:
+
 3.2.1 自行编译，可以使用make工具进行编译, 具体指令为:
 ```shell
 git clone https://github.com/NouamaneTazi/bloomz.cpp && cd bloomz.cpp
@@ -177,11 +182,11 @@ python3 convert-hf-to-ggml.py [你下载的模型路径] [你希望存储ggml格
 如：./quantize ./models/ggml-model-bloomz-7b1-f16.bin ./models/ggml-model-bloomz-7b1-f16-q4_0.bin 2
 ```
 
-4.4 通过编译的main文件，进行量化后的结果验证:
+3.4 通过编译的main文件，进行量化后的结果验证:
 ```
 ./main -m models/ggml-model-bloomz-7b1-f16-q4_0.bin  -p 'Translate "Hi, how are you?" in French:' -t 8 -n 256
 ```
-4.5 对应的量化模型可以[点击这里下载](https://huggingface.co/Wauplin/bloomz-7b1.cpp/tree/main)
+3.5 对应的量化模型可以[点击这里下载](https://huggingface.co/Wauplin/bloomz-7b1.cpp/tree/main)
 
 -----------
 ## 4.Phoenix
@@ -200,7 +205,6 @@ make
 
 4.3.1 可以执行如下命令,将Phoenix转换为ggml格式，使用如下指令
 ```shell
-
 python3 convert-hf-to-ggml.py [你下载的模型路径] [你希望存储ggml格式的路径] 
 
 如：python3 Phoenix\convert-hf-to-ggml.py .\LLMModel\phoenix-chat-7b ./models
@@ -224,4 +228,10 @@ python3 convert-hf-to-ggml.py [你下载的模型路径] [你希望存储ggml格
 
 
 -----------
+## 5.ChatGLM
+todo
+
+----------
+## 6.Falcon
+todo
 
