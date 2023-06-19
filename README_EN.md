@@ -245,7 +245,7 @@ You need sufficient disk space to store them, and enough RAM to load them. The m
 |------------------|---------------|------------------------|
 | phoenix-chat-7b  | 15 GB         | 4.7GB                 |
 
-2.4.4 inference speed
+4.4.4 inference speed
 
 | Model                | Measure      | F16   |Q4|
 |----------------------|--------------|-------|-----------|

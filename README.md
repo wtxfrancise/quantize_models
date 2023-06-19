@@ -160,6 +160,14 @@ print(output)
 | chimera-inst-chat-7B | 12.5 GB       | 3.9GB                    |
 
 
+2.4.4 推理速度
+
+| Model                | Measure      | F16   |Q4|
+|----------------------|--------------|-------|-----------|
+| chimera-chat-7B      | perplexity   | todo  | todo  |
+| chimera-chat-7B      | file size    | todo  | todo  |
+| chimera-chat-7B      | ms/tok       |  todo  | todo  |
+
 2.5 量化文件下载，可以通过百度网盘：
 链接：https://pan.baidu.com/s/1mKPiPvmO1BeZPhkwH6F1QQ  提取码：6fzy 
 
@@ -236,6 +244,13 @@ python3 convert-hf-to-ggml.py [你下载的模型路径] [你希望存储ggml格
 |------------------|---------------|------------------------|
 | phoenix-chat-7b  | 15 GB         | 4.7GB                 |
 
+4.4.4 推理速度
+
+| Model                | Measure      | F16   |Q4|
+|----------------------|--------------|-------|-----------|
+| phoenix-chat-7b      | perplexity   | todo  | todo  |
+| phoenix-chat-7b     | file size    | todo  | todo  |
+| phoenix-chat-7b    | ms/tok       |  todo  | todo  |
 
 
 4.4 通过编译的main文件，进行量化后的结果验证:
