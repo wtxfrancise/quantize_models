@@ -152,6 +152,23 @@ output = llm("Q: what is your name? A: ", max_tokens=32, stop=["Q:", "\n"], echo
 print(output)
 ```
 
+2.4.3 Memory/Disk Requirements
+You need sufficient disk space to store them, and enough RAM to load them. The memory and disk requirements are the same. Below are the specific requirements.
+
+| Model            | Original size | Quantized size (4-bit) |
+|------------------|---------------|------------------------|
+| chimera-chat-7B  | 12.5 GB       | 3.9GB                  |
+| chimera-inst-chat-7B | 12.5 GB   | 3.9GB                  |
+
+2.4.4 inference speed
+
+| Model                | Measure      | F16   |Q4|
+|----------------------|--------------|-------|-----------|
+| chimera-chat-7B      | perplexity   | todo  | todo  |
+| chimera-chat-7B      | file size    | todo  | todo  |
+| chimera-chat-7B      | ms/tok       |  todo  | todo  |
+
+
 2.5 Quantified files can be downloaded through Baidu Netdisk:
 Link：https://pan.baidu.com/s/1mKPiPvmO1BeZPhkwH6F1QQ  code：6fzy 
 
@@ -220,6 +237,22 @@ python3 convert-hf-to-ggml.py [your downloaded model path] [the path you want to
 
 eg：./quantize ./models/ggml-model-bloomz-7b1-f16.bin ./models/ggml-model-bloomz-7b1-f16-q4_0.bin 2
 ```
+
+4.3.4 Memory/Disk Requirements
+You need sufficient disk space to store them, and enough RAM to load them. The memory and disk requirements are the same. Below are the specific requirements.
+
+| Model            | Original size | Quantized size (4-bit) |
+|------------------|---------------|------------------------|
+| phoenix-chat-7b  | 15 GB         | 4.7GB                 |
+
+2.4.4 inference speed
+
+| Model                | Measure      | F16   |Q4|
+|----------------------|--------------|-------|-----------|
+| phoenix-chat-7b      | perplexity   | todo  | todo  |
+| phoenix-chat-7b     | file size    | todo  | todo  |
+| phoenix-chat-7b    | ms/tok       |  todo  | todo  |
+
 
 4.4 Verify the results after quantization through the compiled main file:
 ```

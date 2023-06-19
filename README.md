@@ -151,6 +151,15 @@ output = llm("Q: what is your name? A: ", max_tokens=32, stop=["Q:", "\n"], echo
 print(output)
 ```
 
+2.4.3 内存/硬盘需求
+您需要足够的磁盘空间来保存它们，并需要足够的RAM来加载它们，内存和磁盘需求是相同的，下面是具体的需求。
+
+| Model            | Original size | Quantized size (4-bit) |
+|------------------|---------------|------------------------|
+| chimera-chat-7B  | 12.5 GB       | 3.9GB                  |
+| chimera-inst-chat-7B | 12.5 GB       | 3.9GB                    |
+
+
 2.5 量化文件下载，可以通过百度网盘：
 链接：https://pan.baidu.com/s/1mKPiPvmO1BeZPhkwH6F1QQ  提取码：6fzy 
 
@@ -219,6 +228,15 @@ python3 convert-hf-to-ggml.py [你下载的模型路径] [你希望存储ggml格
 
 如：./quantize ./models/ggml-model-bloomz-7b1-f16.bin ./models/ggml-model-bloomz-7b1-f16-q4_0.bin 2
 ```
+
+4.3.4 内存/硬盘需求
+您需要足够的磁盘空间来保存它们，并需要足够的RAM来加载它们，内存和磁盘需求是相同的，下面是具体的需求。
+
+| Model            | Original size | Quantized size (4-bit) |
+|------------------|---------------|------------------------|
+| phoenix-chat-7b  | 15 GB         | 4.7GB                 |
+
+
 
 4.4 通过编译的main文件，进行量化后的结果验证:
 ```
