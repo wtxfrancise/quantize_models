@@ -1,3 +1,5 @@
+[**🇨🇳中文**](./README.md) | [**English**](./README_EN.md) |
+
 # quantize_models
 This code repository aims to collect various implementation methods for the quantization of large models
 
@@ -157,7 +159,7 @@ print(output)
 ## 3.bloomz
 3.1 下载bloomz模型，具体可以点击[链接地址](https://github.com/NouamaneTazi/bloomz.cpp)进行查看
 
-3.2 自行编译，可以使用make工具进行编译, 具体指令为:
+3.2 编译
 
 3.2.1 自行编译，可以使用make工具进行编译, 具体指令为:
 ```shell
